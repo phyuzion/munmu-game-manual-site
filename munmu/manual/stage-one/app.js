@@ -1,4 +1,4 @@
-import {StageOne} from './engine.js?v=5';
+import {StageOne} from './engine.js?v=6';
 const $=s=>document.querySelector(s),canvas=$('#battlefield'),ctx=canvas.getContext('2d'),mini=$('#minimap'),mctx=mini.getContext('2d'),tile=80,viewH=10,keys=new Set();let game=null,baseMap=null,last=performance.now(),acc=0,paused=false,joy={x:0,y:0},cameraY=0,uiClock=0;
 const clamp=(v,a,b)=>Math.max(a,Math.min(b,v));
 const terrainColor={dirt:'#bda16c',stone:'#9d9d8d',forest:'#4f7754',water:'#518b99',bridge:'#c19a66'};
