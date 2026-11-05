@@ -2,17 +2,309 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "title": "문무 격자 전장 데이터 v1",
   "type": "object",
-  "required": ["schemaVersion", "id", "name", "status", "coordinateSystem", "grid", "terrainTypes", "tiles", "zones", "objects", "spawns", "mission"],
+  "required": [
+    "schemaVersion",
+    "id",
+    "name",
+    "status",
+    "coordinateSystem",
+    "grid",
+    "terrainTypes",
+    "tiles",
+    "zones",
+    "objects",
+    "spawns",
+    "mission"
+  ],
   "properties": {
-    "schemaVersion": {"const": "1.0.0"}, "id": {"type": "string", "minLength": 1}, "name": {"type": "string"}, "status": {"enum": ["prototype", "reviewed", "approved"]},
-    "grid": {"type": "object", "required": ["width", "height", "tileWorldUnits"], "properties": {"width": {"type": "integer", "minimum": 1}, "height": {"type": "integer", "minimum": 1}, "tileWorldUnits": {"type": "number", "exclusiveMinimum": 0}}},
-    "coordinateSystem": {"type": "object", "required": ["origin", "x", "y", "unit"], "properties": {"origin": {"const": "top-left"}, "x": {"const": "east"}, "y": {"const": "south"}, "unit": {"const": "tile"}}},
-    "terrainTypes": {"type": "object", "description": "지형별 이동 비용·통과·시야 차단 규칙"},
-    "tiles": {"type": "array", "items": {"type": "array", "items": {"type": "object", "required": ["terrain", "elevation"], "properties": {"terrain": {"enum": ["dirt", "stone", "forest", "water", "bridge"]}, "elevation": {"type": "number"}}}}},
-    "zones": {"type": "array", "items": {"type": "object", "required": ["id", "name", "rect"]}},
-    "objects": {"type": "array", "items": {"type": "object", "required": ["id", "prototypeId", "anchor", "footprint", "blocksMovement", "blocksSight", "destructible"], "properties": {"id": {"type": "string"}, "prototypeId": {"type": "string"}, "anchor": {"$ref": "#/$defs/point"}, "footprint": {"type": "object", "required": ["width", "height"], "properties": {"width": {"type": "integer", "minimum": 1}, "height": {"type": "integer", "minimum": 1}}}, "blocksMovement": {"type": "boolean"}, "blocksSight": {"type": "boolean"}, "destructible": {"type": "boolean"}, "state": {"enum": ["open", "closed", "destroyed"]}, "health": {"type": "number", "minimum": 0}}}},
-    "spawns": {"type": "array", "items": {"type": "object", "required": ["id", "position", "side"], "properties": {"position": {"$ref": "#/$defs/point"}}}},
-    "mission": {"type": "object", "required": ["playerSide", "enemySide", "spawnId", "enemySpawnId", "objective"]}
+    "schemaVersion": {
+      "const": "1.0.0"
+    },
+    "id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "name": {
+      "type": "string"
+    },
+    "status": {
+      "enum": [
+        "prototype",
+        "reviewed",
+        "approved"
+      ]
+    },
+    "grid": {
+      "type": "object",
+      "required": [
+        "width",
+        "height",
+        "tileWorldUnits"
+      ],
+      "properties": {
+        "width": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "height": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "tileWorldUnits": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        }
+      }
+    },
+    "coordinateSystem": {
+      "type": "object",
+      "required": [
+        "origin",
+        "x",
+        "y",
+        "unit"
+      ],
+      "properties": {
+        "origin": {
+          "const": "top-left"
+        },
+        "x": {
+          "const": "east"
+        },
+        "y": {
+          "const": "south"
+        },
+        "unit": {
+          "const": "tile"
+        }
+      }
+    },
+    "terrainTypes": {
+      "type": "object",
+      "description": "지형별 이동 비용·통과·시야 차단 규칙"
+    },
+    "unitTypes": {
+      "type": "array",
+      "description": "유닛 충돌 크기 시험값",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "name",
+          "collisionShape",
+          "collisionDiameter",
+          "status"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "collisionShape": {
+            "const": "circle"
+          },
+          "collisionDiameter": {
+            "type": "number",
+            "exclusiveMinimum": 0
+          },
+          "status": {
+            "const": "proposal"
+          }
+        }
+      }
+    },
+    "tiles": {
+      "type": "array",
+      "items": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "required": [
+            "terrain",
+            "elevation"
+          ],
+          "properties": {
+            "terrain": {
+              "enum": [
+                "dirt",
+                "stone",
+                "forest",
+                "water",
+                "bridge"
+              ]
+            },
+            "elevation": {
+              "type": "number"
+            }
+          }
+        }
+      }
+    },
+    "zones": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "name",
+          "rect"
+        ]
+      }
+    },
+    "objects": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "prototypeId",
+          "anchor",
+          "footprint",
+          "blocksMovement",
+          "blocksSight",
+          "destructible"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "prototypeId": {
+            "type": "string"
+          },
+          "anchor": {
+            "$ref": "#/$defs/point"
+          },
+          "footprint": {
+            "type": "object",
+            "required": [
+              "width",
+              "height"
+            ],
+            "properties": {
+              "width": {
+                "type": "integer",
+                "minimum": 1
+              },
+              "height": {
+                "type": "integer",
+                "minimum": 1
+              }
+            }
+          },
+          "blocksMovement": {
+            "type": "boolean"
+          },
+          "blocksSight": {
+            "type": "boolean"
+          },
+          "destructible": {
+            "type": "boolean"
+          },
+          "state": {
+            "enum": [
+              "open",
+              "closed",
+              "destroyed"
+            ]
+          },
+          "health": {
+            "type": "number",
+            "minimum": 0
+          }
+        }
+      }
+    },
+    "spawns": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "position",
+          "side"
+        ],
+        "properties": {
+          "position": {
+            "$ref": "#/$defs/point"
+          }
+        }
+      }
+    },
+    "mission": {
+      "type": "object",
+      "required": [
+        "playerSide",
+        "enemySide",
+        "spawnId",
+        "enemySpawnId",
+        "objective"
+      ]
+    },
+    "preview": {
+      "type": "object",
+      "description": "편집기 시험 상태, 실제 출전 유닛이 아님",
+      "required": [
+        "A",
+        "B",
+        "range"
+      ],
+      "properties": {
+        "A": {
+          "$ref": "#/$defs/previewActor"
+        },
+        "B": {
+          "$ref": "#/$defs/previewActor"
+        },
+        "range": {
+          "type": "number",
+          "minimum": 0.5,
+          "maximum": 10
+        }
+      }
+    }
   },
-  "$defs": {"point": {"type": "object", "required": ["x", "y"], "properties": {"x": {"type": "integer", "minimum": 0}, "y": {"type": "integer", "minimum": 0}}}}
+  "$defs": {
+    "point": {
+      "type": "object",
+      "required": [
+        "x",
+        "y"
+      ],
+      "properties": {
+        "x": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "y": {
+          "type": "integer",
+          "minimum": 0
+        }
+      }
+    },
+    "previewActor": {
+      "type": "object",
+      "required": [
+        "x",
+        "y",
+        "diameter"
+      ],
+      "properties": {
+        "x": {
+          "type": "number",
+          "minimum": 0
+        },
+        "y": {
+          "type": "number",
+          "minimum": 0
+        },
+        "diameter": {
+          "type": "number",
+          "minimum": 0.1,
+          "maximum": 2.5
+        }
+      }
+    }
+  }
 }

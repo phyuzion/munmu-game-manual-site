@@ -54,6 +54,43 @@
       "blocksSight": false
     }
   },
+  "unitTypes": [
+    {
+      "id": "hero",
+      "name": "영웅",
+      "collisionShape": "circle",
+      "collisionDiameter": 0.8,
+      "status": "proposal"
+    },
+    {
+      "id": "infantry",
+      "name": "보병·일반 몹",
+      "collisionShape": "circle",
+      "collisionDiameter": 0.7,
+      "status": "proposal"
+    },
+    {
+      "id": "cavalry",
+      "name": "기병",
+      "collisionShape": "circle",
+      "collisionDiameter": 1.2,
+      "status": "proposal"
+    },
+    {
+      "id": "boss",
+      "name": "대형 보스",
+      "collisionShape": "circle",
+      "collisionDiameter": 2,
+      "status": "proposal"
+    },
+    {
+      "id": "large",
+      "name": "초대형 예시",
+      "collisionShape": "circle",
+      "collisionDiameter": 2.5,
+      "status": "proposal"
+    }
+  ],
   "tiles": [
     [
       {
@@ -1474,8 +1511,8 @@
   "assumptions": [
     "지형과 배치는 플레이 검증 전의 기획 시험안",
     "1타일=1월드 단위는 시험값; 실제 미터 크기는 미확정",
-    "이동은 4방향 1칸 점유 시험; 다중 칸 병력은 미구현",
-    "사거리는 타일 중심 간 유클리드 거리; 시야는 2D 장애물만 검사",
+    "격자는 지형 배치 기준이며 영웅과 몹은 연속 좌표로 자유롭게 움직인다; 실제 이동 엔진은 미구현",
+    "거리와 원형 몸체 간격·2D 직선 시야는 시험 제안; 최종 게임 판정 미확정",
     "높이·성벽 위 유닛·투사체 곡선·진영별 지형 효과는 미구현"
   ]
 }

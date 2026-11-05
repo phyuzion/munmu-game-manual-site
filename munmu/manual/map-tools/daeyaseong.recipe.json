@@ -348,5 +348,42 @@
       "blocksMovement": false,
       "blocksSight": false
     }
-  }
+  },
+  "unitTypes": [
+    {
+      "id": "hero",
+      "name": "영웅",
+      "collisionShape": "circle",
+      "collisionDiameter": 0.8,
+      "status": "proposal"
+    },
+    {
+      "id": "infantry",
+      "name": "보병·일반 몹",
+      "collisionShape": "circle",
+      "collisionDiameter": 0.7,
+      "status": "proposal"
+    },
+    {
+      "id": "cavalry",
+      "name": "기병",
+      "collisionShape": "circle",
+      "collisionDiameter": 1.2,
+      "status": "proposal"
+    },
+    {
+      "id": "boss",
+      "name": "대형 보스",
+      "collisionShape": "circle",
+      "collisionDiameter": 2.0,
+      "status": "proposal"
+    },
+    {
+      "id": "large",
+      "name": "초대형 예시",
+      "collisionShape": "circle",
+      "collisionDiameter": 2.5,
+      "status": "proposal"
+    }
+  ]
 }

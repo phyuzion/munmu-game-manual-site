@@ -1,5 +1,5 @@
 import {objects} from './object-catalog-data.js';
-import {drawBattleLayout} from './battle-layout.js?v=20261105-8';
+import {drawBattleLayout} from './battle-layout.js?v=20261105-free';
 import {battlePlans} from './battle-plans.js';
 import {branchBattlePlans} from './branch-battle-plans.js';
 import {routes} from './campaign-branches.js';

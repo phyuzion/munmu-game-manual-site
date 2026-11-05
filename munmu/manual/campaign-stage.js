@@ -1,4 +1,4 @@
-import {drawBattleLayout} from './battle-layout.js?v=20261105-8';
+import {drawBattleLayout} from './battle-layout.js?v=20261105-free';
 import {campaigns} from './three-campaigns-data.js';
 import {branchBattlePlans} from './branch-battle-plans.js';
 import {scenes} from './if-scenes.js';
