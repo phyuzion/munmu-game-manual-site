@@ -4,3 +4,6 @@
 @media(min-width:851px){.screen canvas{width:auto;max-width:100%;max-height:calc(100vh - 110px);margin:auto}.screen{display:flex;justify-content:center}.overlay{width:100%}}
 
 .ally-wave{margin:0 0 10px;padding:8px 10px;border:1px solid #467d76;border-radius:7px;background:#173d39;color:#b8e8de;font-weight:700;font-size:13px}
+
+.loadout{display:grid;gap:8px;margin:14px 0}.loadout p{margin:0}.loadout label{display:flex;align-items:center;justify-content:space-between;gap:8px}.loadout select{max-width:75%;padding:7px;background:#fff;color:#203525;border:1px solid #829988;border-radius:6px;font:inherit}.aim-hint{background:#6e4e22;color:#fff0c2;padding:10px;border-radius:7px;font-weight:700}.aim-hint button{margin-left:8px;color:white;background:#49351f;border:1px solid #ddb973;border-radius:4px;padding:4px 7px}.aim-hint[hidden]{display:none}
+.overlay .card{max-height:100%;overflow:auto}
