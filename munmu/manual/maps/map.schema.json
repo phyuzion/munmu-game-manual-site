@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "문무 격자 전장 데이터 v1",
+  "type": "object",
+  "required": ["schemaVersion", "id", "name", "status", "coordinateSystem", "grid", "terrainTypes", "tiles", "zones", "objects", "spawns", "mission"],
+  "properties": {
+    "schemaVersion": {"const": "1.0.0"}, "id": {"type": "string", "minLength": 1}, "name": {"type": "string"}, "status": {"enum": ["prototype", "reviewed", "approved"]},
+    "grid": {"type": "object", "required": ["width", "height", "tileWorldUnits"], "properties": {"width": {"type": "integer", "minimum": 1}, "height": {"type": "integer", "minimum": 1}, "tileWorldUnits": {"type": "number", "exclusiveMinimum": 0}}},
+    "coordinateSystem": {"type": "object", "required": ["origin", "x", "y", "unit"], "properties": {"origin": {"const": "top-left"}, "x": {"const": "east"}, "y": {"const": "south"}, "unit": {"const": "tile"}}},
+    "terrainTypes": {"type": "object", "description": "지형별 이동 비용·통과·시야 차단 규칙"},
+    "tiles": {"type": "array", "items": {"type": "array", "items": {"type": "object", "required": ["terrain", "elevation"], "properties": {"terrain": {"enum": ["dirt", "stone", "forest", "water", "bridge"]}, "elevation": {"type": "number"}}}}},
+    "zones": {"type": "array", "items": {"type": "object", "required": ["id", "name", "rect"]}},
+    "objects": {"type": "array", "items": {"type": "object", "required": ["id", "prototypeId", "anchor", "footprint", "blocksMovement", "blocksSight", "destructible"], "properties": {"id": {"type": "string"}, "prototypeId": {"type": "string"}, "anchor": {"$ref": "#/$defs/point"}, "footprint": {"type": "object", "required": ["width", "height"], "properties": {"width": {"type": "integer", "minimum": 1}, "height": {"type": "integer", "minimum": 1}}}, "blocksMovement": {"type": "boolean"}, "blocksSight": {"type": "boolean"}, "destructible": {"type": "boolean"}, "state": {"enum": ["open", "closed", "destroyed"]}, "health": {"type": "number", "minimum": 0}}}},
+    "spawns": {"type": "array", "items": {"type": "object", "required": ["id", "position", "side"], "properties": {"position": {"$ref": "#/$defs/point"}}}},
+    "mission": {"type": "object", "required": ["playerSide", "enemySide", "spawnId", "enemySpawnId", "objective"]}
+  },
+  "$defs": {"point": {"type": "object", "required": ["x", "y"], "properties": {"x": {"type": "integer", "minimum": 0}, "y": {"type": "integer", "minimum": 0}}}}
+}

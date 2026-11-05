@@ -1,0 +1,1505 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "silla-1-1",
+  "name": "신라 1-1 대야성 함락",
+  "status": "prototype",
+  "sourceRecipe": "daeyaseong-siege-prototype",
+  "route": "silla",
+  "battleId": "1-1",
+  "coordinateSystem": {
+    "origin": "top-left",
+    "x": "east",
+    "y": "south",
+    "unit": "tile"
+  },
+  "grid": {
+    "width": 8,
+    "height": 36,
+    "tileWorldUnits": 1
+  },
+  "terrainTypes": {
+    "dirt": {
+      "label": "흙길",
+      "color": "#c4ab76",
+      "moveCost": 1,
+      "blocksMovement": false,
+      "blocksSight": false
+    },
+    "stone": {
+      "label": "성 안 바닥",
+      "color": "#b6ad99",
+      "moveCost": 1,
+      "blocksMovement": false,
+      "blocksSight": false
+    },
+    "forest": {
+      "label": "숲",
+      "color": "#688862",
+      "moveCost": 1.5,
+      "blocksMovement": false,
+      "blocksSight": true
+    },
+    "water": {
+      "label": "물",
+      "color": "#6d9fab",
+      "moveCost": null,
+      "blocksMovement": true,
+      "blocksSight": false
+    },
+    "bridge": {
+      "label": "다리 바닥",
+      "color": "#cfad7b",
+      "moveCost": 1,
+      "blocksMovement": false,
+      "blocksSight": false
+    }
+  },
+  "tiles": [
+    [
+      {
+        "terrain": "forest",
+        "elevation": 0
+      },
+      {
+        "terrain": "dirt",
+        "elevation": 0
+      },
+      {
+        "terrain": "dirt",
+        "elevation": 0
+      },
+      {
+        "terrain": "dirt",
+        "elevation": 0
+      },
+      {
+        "terrain": "dirt",
+        "elevation": 0
+      },
+      {
+        "terrain": "dirt",
+        "elevation": 0
+      },
+      {
+        "terrain": "dirt",
+        "elevation": 0
+      },
+      {
+        "terrain": "forest",
+        "elevation": 0
+      }
+    ],
+    [
+      {
+        "terrain": "forest",
+        "elevation": 0
+      },
+      {
+        "terrain": "dirt",
+        "elevation": 0
+      },
+      {
+        "terrain": "dirt",
+        "elevation": 0
+      },
+      {
+        "terrain": "dirt",
+        "elevation": 0
+      },
+      {
+        "terrain": "dirt",
+        "elevation": 0
+      },
+      {
+        "terrain": "dirt",
+        "elevation": 0
+      },
+      {
+        "terrain": "dirt",
+        "elevation": 0
+      },
+      {
+        "terrain": "forest",
+        "elevation": 0
+      }
+    ],
+    [
+      {
+        "terrain": "forest",
+        "elevation": 0
+      },
+      {
+        "terrain": "dirt",
+        "elevation": 0
+      },
+      {
+        "terrain": "dirt",
+        "elevation": 0
+      },
+      {
+        "terrain": "dirt",
+        "elevation": 0
+      },
+      {
+        "terrain": "dirt",
+        "elevation": 0
+      },
+      {
+        "terrain": "dirt",
+        "elevation": 0
+      },
+      {
+        "terrain": "dirt",
+        "elevation": 0
+      },
+      {
+        "terrain": "forest",
+        "elevation": 0
+      }
+    ],
+    [
+      {
+        "terrain": "forest",
+        "elevation": 0
+      },
+      {
+        "terrain": "dirt",
+        "elevation": 0
+      },
+      {
+        "terrain": "dirt",
+        "elevation": 0
+      },
+      {
+        "terrain": "dirt",
+        "elevation": 0
+      },
+      {
+        "terrain": "dirt",
+        "elevation": 0
+      },
+      {
+        "terrain": "dirt",
+        "elevation": 0
+      },
+      {
+        "terrain": "dirt",
+        "elevation": 0
+      },
+      {
+        "terrain": "forest",
+        "elevation": 0
+      }
+    ],
+    [
+      {
+        "terrain": "forest",
+        "elevation": 0
+      },
+      {
+        "terrain": "dirt",
+        "elevation": 0
+      },
+      {
+        "terrain": "dirt",
+        "elevation": 0
+      },
+      {
+        "terrain": "dirt",
+        "elevation": 0
+      },
+      {
+        "terrain": "dirt",
+        "elevation": 0
+      },
+      {
+        "terrain": "dirt",
+        "elevation": 0
+      },
+      {
+        "terrain": "dirt",
+        "elevation": 0
+      },
+      {
+        "terrain": "forest",
+        "elevation": 0
+      }
+    ],
+    [
+      {
+        "terrain": "forest",
+        "elevation": 0
+      },
+      {
+        "terrain": "dirt",
+        "elevation": 0
+      },
+      {
+        "terrain": "dirt",
+        "elevation": 0
+      },
+      {
+        "terrain": "dirt",
+        "elevation": 0
+      },
+      {
+        "terrain": "dirt",
+        "elevation": 0
+      },
+      {
+        "terrain": "dirt",
+        "elevation": 0
+      },
+      {
+        "terrain": "dirt",
+        "elevation": 0
+      },
+      {
+        "terrain": "forest",
+        "elevation": 0
+      }
+    ],
+    [
+      {
+        "terrain": "forest",
+        "elevation": 0
+      },
+      {
+        "terrain": "dirt",
+        "elevation": 0
+      },
+      {
+        "terrain": "dirt",
+        "elevation": 0
+      },
+      {
+        "terrain": "dirt",
+        "elevation": 0
+      },
+      {
+        "terrain": "dirt",
+        "elevation": 0
+      },
+      {
+        "terrain": "dirt",
+        "elevation": 0
+      },
+      {
+        "terrain": "dirt",
+        "elevation": 0
+      },
+      {
+        "terrain": "forest",
+        "elevation": 0
+      }
+    ],
+    [
+      {
+        "terrain": "forest",
+        "elevation": 0
+      },
+      {
+        "terrain": "dirt",
+        "elevation": 0
+      },
+      {
+        "terrain": "dirt",
+        "elevation": 0
+      },
+      {
+        "terrain": "dirt",
+        "elevation": 0
+      },
+      {
+        "terrain": "dirt",
+        "elevation": 0
+      },
+      {
+        "terrain": "dirt",
+        "elevation": 0
+      },
+      {
+        "terrain": "dirt",
+        "elevation": 0
+      },
+      {
+        "terrain": "forest",
+        "elevation": 0
+      }
+    ],
+    [
+      {
+        "terrain": "forest",
+        "elevation": 0
+      },
+      {
+        "terrain": "dirt",
+        "elevation": 0
+      },
+      {
+        "terrain": "dirt",
+        "elevation": 0
+      },
+      {
+        "terrain": "dirt",
+        "elevation": 0
+      },
+      {
+        "terrain": "dirt",
+        "elevation": 0
+      },
+      {
+        "terrain": "dirt",
+        "elevation": 0
+      },
+      {
+        "terrain": "dirt",
+        "elevation": 0
+      },
+      {
+        "terrain": "forest",
+        "elevation": 0
+      }
+    ],
+    [
+      {
+        "terrain": "forest",
+        "elevation": 0
+      },
+      {
+        "terrain": "dirt",
+        "elevation": 0
+      },
+      {
+        "terrain": "dirt",
+        "elevation": 0
+      },
+      {
+        "terrain": "dirt",
+        "elevation": 0
+      },
+      {
+        "terrain": "dirt",
+        "elevation": 0
+      },
+      {
+        "terrain": "dirt",
+        "elevation": 0
+      },
+      {
+        "terrain": "dirt",
+        "elevation": 0
+      },
+      {
+        "terrain": "forest",
+        "elevation": 0
+      }
+    ],
+    [
+      {
+        "terrain": "forest",
+        "elevation": 0
+      },
+      {
+        "terrain": "dirt",
+        "elevation": 0
+      },
+      {
+        "terrain": "dirt",
+        "elevation": 0
+      },
+      {
+        "terrain": "dirt",
+        "elevation": 0
+      },
+      {
+        "terrain": "dirt",
+        "elevation": 0
+      },
+      {
+        "terrain": "dirt",
+        "elevation": 0
+      },
+      {
+        "terrain": "dirt",
+        "elevation": 0
+      },
+      {
+        "terrain": "forest",
+        "elevation": 0
+      }
+    ],
+    [
+      {
+        "terrain": "forest",
+        "elevation": 0
+      },
+      {
+        "terrain": "dirt",
+        "elevation": 0
+      },
+      {
+        "terrain": "dirt",
+        "elevation": 0
+      },
+      {
+        "terrain": "dirt",
+        "elevation": 0
+      },
+      {
+        "terrain": "dirt",
+        "elevation": 0
+      },
+      {
+        "terrain": "dirt",
+        "elevation": 0
+      },
+      {
+        "terrain": "dirt",
+        "elevation": 0
+      },
+      {
+        "terrain": "forest",
+        "elevation": 0
+      }
+    ],
+    [
+      {
+        "terrain": "water",
+        "elevation": 0
+      },
+      {
+        "terrain": "bridge",
+        "elevation": 0
+      },
+      {
+        "terrain": "bridge",
+        "elevation": 0
+      },
+      {
+        "terrain": "bridge",
+        "elevation": 0
+      },
+      {
+        "terrain": "bridge",
+        "elevation": 0
+      },
+      {
+        "terrain": "bridge",
+        "elevation": 0
+      },
+      {
+        "terrain": "bridge",
+        "elevation": 0
+      },
+      {
+        "terrain": "water",
+        "elevation": 0
+      }
+    ],
+    [
+      {
+        "terrain": "water",
+        "elevation": 0
+      },
+      {
+        "terrain": "bridge",
+        "elevation": 0
+      },
+      {
+        "terrain": "bridge",
+        "elevation": 0
+      },
+      {
+        "terrain": "bridge",
+        "elevation": 0
+      },
+      {
+        "terrain": "bridge",
+        "elevation": 0
+      },
+      {
+        "terrain": "bridge",
+        "elevation": 0
+      },
+      {
+        "terrain": "bridge",
+        "elevation": 0
+      },
+      {
+        "terrain": "water",
+        "elevation": 0
+      }
+    ],
+    [
+      {
+        "terrain": "water",
+        "elevation": 0
+      },
+      {
+        "terrain": "bridge",
+        "elevation": 0
+      },
+      {
+        "terrain": "bridge",
+        "elevation": 0
+      },
+      {
+        "terrain": "bridge",
+        "elevation": 0
+      },
+      {
+        "terrain": "bridge",
+        "elevation": 0
+      },
+      {
+        "terrain": "bridge",
+        "elevation": 0
+      },
+      {
+        "terrain": "bridge",
+        "elevation": 0
+      },
+      {
+        "terrain": "water",
+        "elevation": 0
+      }
+    ],
+    [
+      {
+        "terrain": "forest",
+        "elevation": 0
+      },
+      {
+        "terrain": "dirt",
+        "elevation": 0
+      },
+      {
+        "terrain": "dirt",
+        "elevation": 0
+      },
+      {
+        "terrain": "dirt",
+        "elevation": 0
+      },
+      {
+        "terrain": "dirt",
+        "elevation": 0
+      },
+      {
+        "terrain": "dirt",
+        "elevation": 0
+      },
+      {
+        "terrain": "dirt",
+        "elevation": 0
+      },
+      {
+        "terrain": "forest",
+        "elevation": 0
+      }
+    ],
+    [
+      {
+        "terrain": "forest",
+        "elevation": 0
+      },
+      {
+        "terrain": "dirt",
+        "elevation": 0
+      },
+      {
+        "terrain": "dirt",
+        "elevation": 0
+      },
+      {
+        "terrain": "dirt",
+        "elevation": 0
+      },
+      {
+        "terrain": "dirt",
+        "elevation": 0
+      },
+      {
+        "terrain": "dirt",
+        "elevation": 0
+      },
+      {
+        "terrain": "dirt",
+        "elevation": 0
+      },
+      {
+        "terrain": "forest",
+        "elevation": 0
+      }
+    ],
+    [
+      {
+        "terrain": "forest",
+        "elevation": 0
+      },
+      {
+        "terrain": "dirt",
+        "elevation": 0
+      },
+      {
+        "terrain": "dirt",
+        "elevation": 0
+      },
+      {
+        "terrain": "dirt",
+        "elevation": 0
+      },
+      {
+        "terrain": "dirt",
+        "elevation": 0
+      },
+      {
+        "terrain": "dirt",
+        "elevation": 0
+      },
+      {
+        "terrain": "dirt",
+        "elevation": 0
+      },
+      {
+        "terrain": "forest",
+        "elevation": 0
+      }
+    ],
+    [
+      {
+        "terrain": "forest",
+        "elevation": 0
+      },
+      {
+        "terrain": "dirt",
+        "elevation": 0
+      },
+      {
+        "terrain": "dirt",
+        "elevation": 0
+      },
+      {
+        "terrain": "dirt",
+        "elevation": 0
+      },
+      {
+        "terrain": "dirt",
+        "elevation": 0
+      },
+      {
+        "terrain": "dirt",
+        "elevation": 0
+      },
+      {
+        "terrain": "dirt",
+        "elevation": 0
+      },
+      {
+        "terrain": "forest",
+        "elevation": 0
+      }
+    ],
+    [
+      {
+        "terrain": "forest",
+        "elevation": 0
+      },
+      {
+        "terrain": "dirt",
+        "elevation": 0
+      },
+      {
+        "terrain": "dirt",
+        "elevation": 0
+      },
+      {
+        "terrain": "dirt",
+        "elevation": 0
+      },
+      {
+        "terrain": "dirt",
+        "elevation": 0
+      },
+      {
+        "terrain": "dirt",
+        "elevation": 0
+      },
+      {
+        "terrain": "dirt",
+        "elevation": 0
+      },
+      {
+        "terrain": "forest",
+        "elevation": 0
+      }
+    ],
+    [
+      {
+        "terrain": "forest",
+        "elevation": 0
+      },
+      {
+        "terrain": "dirt",
+        "elevation": 0
+      },
+      {
+        "terrain": "dirt",
+        "elevation": 0
+      },
+      {
+        "terrain": "dirt",
+        "elevation": 0
+      },
+      {
+        "terrain": "dirt",
+        "elevation": 0
+      },
+      {
+        "terrain": "dirt",
+        "elevation": 0
+      },
+      {
+        "terrain": "dirt",
+        "elevation": 0
+      },
+      {
+        "terrain": "forest",
+        "elevation": 0
+      }
+    ],
+    [
+      {
+        "terrain": "forest",
+        "elevation": 0
+      },
+      {
+        "terrain": "dirt",
+        "elevation": 0
+      },
+      {
+        "terrain": "dirt",
+        "elevation": 0
+      },
+      {
+        "terrain": "dirt",
+        "elevation": 0
+      },
+      {
+        "terrain": "dirt",
+        "elevation": 0
+      },
+      {
+        "terrain": "dirt",
+        "elevation": 0
+      },
+      {
+        "terrain": "dirt",
+        "elevation": 0
+      },
+      {
+        "terrain": "forest",
+        "elevation": 0
+      }
+    ],
+    [
+      {
+        "terrain": "dirt",
+        "elevation": 0
+      },
+      {
+        "terrain": "dirt",
+        "elevation": 0
+      },
+      {
+        "terrain": "dirt",
+        "elevation": 0
+      },
+      {
+        "terrain": "dirt",
+        "elevation": 0
+      },
+      {
+        "terrain": "dirt",
+        "elevation": 0
+      },
+      {
+        "terrain": "dirt",
+        "elevation": 0
+      },
+      {
+        "terrain": "dirt",
+        "elevation": 0
+      },
+      {
+        "terrain": "dirt",
+        "elevation": 0
+      }
+    ],
+    [
+      {
+        "terrain": "dirt",
+        "elevation": 0
+      },
+      {
+        "terrain": "dirt",
+        "elevation": 0
+      },
+      {
+        "terrain": "dirt",
+        "elevation": 0
+      },
+      {
+        "terrain": "dirt",
+        "elevation": 0
+      },
+      {
+        "terrain": "dirt",
+        "elevation": 0
+      },
+      {
+        "terrain": "dirt",
+        "elevation": 0
+      },
+      {
+        "terrain": "dirt",
+        "elevation": 0
+      },
+      {
+        "terrain": "dirt",
+        "elevation": 0
+      }
+    ],
+    [
+      {
+        "terrain": "dirt",
+        "elevation": 0
+      },
+      {
+        "terrain": "dirt",
+        "elevation": 0
+      },
+      {
+        "terrain": "dirt",
+        "elevation": 0
+      },
+      {
+        "terrain": "dirt",
+        "elevation": 0
+      },
+      {
+        "terrain": "dirt",
+        "elevation": 0
+      },
+      {
+        "terrain": "dirt",
+        "elevation": 0
+      },
+      {
+        "terrain": "dirt",
+        "elevation": 0
+      },
+      {
+        "terrain": "dirt",
+        "elevation": 0
+      }
+    ],
+    [
+      {
+        "terrain": "stone",
+        "elevation": 0
+      },
+      {
+        "terrain": "stone",
+        "elevation": 0
+      },
+      {
+        "terrain": "stone",
+        "elevation": 0
+      },
+      {
+        "terrain": "stone",
+        "elevation": 0
+      },
+      {
+        "terrain": "stone",
+        "elevation": 0
+      },
+      {
+        "terrain": "stone",
+        "elevation": 0
+      },
+      {
+        "terrain": "stone",
+        "elevation": 0
+      },
+      {
+        "terrain": "stone",
+        "elevation": 0
+      }
+    ],
+    [
+      {
+        "terrain": "stone",
+        "elevation": 0
+      },
+      {
+        "terrain": "stone",
+        "elevation": 0
+      },
+      {
+        "terrain": "stone",
+        "elevation": 0
+      },
+      {
+        "terrain": "stone",
+        "elevation": 0
+      },
+      {
+        "terrain": "stone",
+        "elevation": 0
+      },
+      {
+        "terrain": "stone",
+        "elevation": 0
+      },
+      {
+        "terrain": "stone",
+        "elevation": 0
+      },
+      {
+        "terrain": "stone",
+        "elevation": 0
+      }
+    ],
+    [
+      {
+        "terrain": "stone",
+        "elevation": 0
+      },
+      {
+        "terrain": "stone",
+        "elevation": 0
+      },
+      {
+        "terrain": "stone",
+        "elevation": 0
+      },
+      {
+        "terrain": "stone",
+        "elevation": 0
+      },
+      {
+        "terrain": "stone",
+        "elevation": 0
+      },
+      {
+        "terrain": "stone",
+        "elevation": 0
+      },
+      {
+        "terrain": "stone",
+        "elevation": 0
+      },
+      {
+        "terrain": "stone",
+        "elevation": 0
+      }
+    ],
+    [
+      {
+        "terrain": "stone",
+        "elevation": 0
+      },
+      {
+        "terrain": "stone",
+        "elevation": 0
+      },
+      {
+        "terrain": "stone",
+        "elevation": 0
+      },
+      {
+        "terrain": "stone",
+        "elevation": 0
+      },
+      {
+        "terrain": "stone",
+        "elevation": 0
+      },
+      {
+        "terrain": "stone",
+        "elevation": 0
+      },
+      {
+        "terrain": "stone",
+        "elevation": 0
+      },
+      {
+        "terrain": "stone",
+        "elevation": 0
+      }
+    ],
+    [
+      {
+        "terrain": "stone",
+        "elevation": 0
+      },
+      {
+        "terrain": "stone",
+        "elevation": 0
+      },
+      {
+        "terrain": "stone",
+        "elevation": 0
+      },
+      {
+        "terrain": "stone",
+        "elevation": 0
+      },
+      {
+        "terrain": "stone",
+        "elevation": 0
+      },
+      {
+        "terrain": "stone",
+        "elevation": 0
+      },
+      {
+        "terrain": "stone",
+        "elevation": 0
+      },
+      {
+        "terrain": "stone",
+        "elevation": 0
+      }
+    ],
+    [
+      {
+        "terrain": "stone",
+        "elevation": 0
+      },
+      {
+        "terrain": "stone",
+        "elevation": 0
+      },
+      {
+        "terrain": "stone",
+        "elevation": 0
+      },
+      {
+        "terrain": "stone",
+        "elevation": 0
+      },
+      {
+        "terrain": "stone",
+        "elevation": 0
+      },
+      {
+        "terrain": "stone",
+        "elevation": 0
+      },
+      {
+        "terrain": "stone",
+        "elevation": 0
+      },
+      {
+        "terrain": "stone",
+        "elevation": 0
+      }
+    ],
+    [
+      {
+        "terrain": "stone",
+        "elevation": 0
+      },
+      {
+        "terrain": "stone",
+        "elevation": 0
+      },
+      {
+        "terrain": "stone",
+        "elevation": 0
+      },
+      {
+        "terrain": "stone",
+        "elevation": 0
+      },
+      {
+        "terrain": "stone",
+        "elevation": 0
+      },
+      {
+        "terrain": "stone",
+        "elevation": 0
+      },
+      {
+        "terrain": "stone",
+        "elevation": 0
+      },
+      {
+        "terrain": "stone",
+        "elevation": 0
+      }
+    ],
+    [
+      {
+        "terrain": "stone",
+        "elevation": 0
+      },
+      {
+        "terrain": "stone",
+        "elevation": 0
+      },
+      {
+        "terrain": "stone",
+        "elevation": 0
+      },
+      {
+        "terrain": "stone",
+        "elevation": 0
+      },
+      {
+        "terrain": "stone",
+        "elevation": 0
+      },
+      {
+        "terrain": "stone",
+        "elevation": 0
+      },
+      {
+        "terrain": "stone",
+        "elevation": 0
+      },
+      {
+        "terrain": "stone",
+        "elevation": 0
+      }
+    ],
+    [
+      {
+        "terrain": "stone",
+        "elevation": 0
+      },
+      {
+        "terrain": "stone",
+        "elevation": 0
+      },
+      {
+        "terrain": "stone",
+        "elevation": 0
+      },
+      {
+        "terrain": "stone",
+        "elevation": 0
+      },
+      {
+        "terrain": "stone",
+        "elevation": 0
+      },
+      {
+        "terrain": "stone",
+        "elevation": 0
+      },
+      {
+        "terrain": "stone",
+        "elevation": 0
+      },
+      {
+        "terrain": "stone",
+        "elevation": 0
+      }
+    ],
+    [
+      {
+        "terrain": "stone",
+        "elevation": 0
+      },
+      {
+        "terrain": "stone",
+        "elevation": 0
+      },
+      {
+        "terrain": "stone",
+        "elevation": 0
+      },
+      {
+        "terrain": "stone",
+        "elevation": 0
+      },
+      {
+        "terrain": "stone",
+        "elevation": 0
+      },
+      {
+        "terrain": "stone",
+        "elevation": 0
+      },
+      {
+        "terrain": "stone",
+        "elevation": 0
+      },
+      {
+        "terrain": "stone",
+        "elevation": 0
+      }
+    ],
+    [
+      {
+        "terrain": "stone",
+        "elevation": 0
+      },
+      {
+        "terrain": "stone",
+        "elevation": 0
+      },
+      {
+        "terrain": "stone",
+        "elevation": 0
+      },
+      {
+        "terrain": "stone",
+        "elevation": 0
+      },
+      {
+        "terrain": "stone",
+        "elevation": 0
+      },
+      {
+        "terrain": "stone",
+        "elevation": 0
+      },
+      {
+        "terrain": "stone",
+        "elevation": 0
+      },
+      {
+        "terrain": "stone",
+        "elevation": 0
+      }
+    ]
+  ],
+  "zones": [
+    {
+      "id": "approach",
+      "name": "북쪽 진입로",
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "width": 8,
+        "height": 12
+      }
+    },
+    {
+      "id": "crossing",
+      "name": "하천과 다리",
+      "rect": {
+        "x": 0,
+        "y": 12,
+        "width": 8,
+        "height": 3
+      }
+    },
+    {
+      "id": "gatefront",
+      "name": "성문 앞 교전지",
+      "rect": {
+        "x": 0,
+        "y": 15,
+        "width": 8,
+        "height": 10
+      }
+    },
+    {
+      "id": "courtyard",
+      "name": "성 안 대피로",
+      "rect": {
+        "x": 0,
+        "y": 25,
+        "width": 8,
+        "height": 11
+      }
+    },
+    {
+      "id": "courtyard-objective",
+      "name": "성 안 거점",
+      "rect": {
+        "x": 1,
+        "y": 28,
+        "width": 6,
+        "height": 4
+      }
+    },
+    {
+      "id": "evacuation-exit",
+      "name": "성 안 대피 지점",
+      "rect": {
+        "x": 1,
+        "y": 33,
+        "width": 6,
+        "height": 2
+      }
+    }
+  ],
+  "objects": [
+    {
+      "id": "wall-west",
+      "prototypeId": "wall",
+      "anchor": {
+        "x": 0,
+        "y": 24
+      },
+      "footprint": {
+        "width": 1,
+        "height": 1
+      },
+      "blocksMovement": true,
+      "blocksSight": true,
+      "destructible": false
+    },
+    {
+      "id": "gate-main",
+      "prototypeId": "gate",
+      "anchor": {
+        "x": 1,
+        "y": 24
+      },
+      "footprint": {
+        "width": 6,
+        "height": 1
+      },
+      "type": "gate",
+      "state": "closed",
+      "blocksMovement": true,
+      "blocksSight": true,
+      "destructible": true,
+      "health": 1000
+    },
+    {
+      "id": "wall-east",
+      "prototypeId": "wall",
+      "anchor": {
+        "x": 7,
+        "y": 24
+      },
+      "footprint": {
+        "width": 1,
+        "height": 1
+      },
+      "blocksMovement": true,
+      "blocksSight": true,
+      "destructible": false
+    },
+    {
+      "id": "barricade-left",
+      "prototypeId": "barricade",
+      "anchor": {
+        "x": 0,
+        "y": 20
+      },
+      "footprint": {
+        "width": 1,
+        "height": 1
+      },
+      "blocksMovement": true,
+      "blocksSight": false,
+      "destructible": true,
+      "health": 300
+    },
+    {
+      "id": "house-east",
+      "prototypeId": "house",
+      "anchor": {
+        "x": 7,
+        "y": 28
+      },
+      "footprint": {
+        "width": 1,
+        "height": 3
+      },
+      "blocksMovement": true,
+      "blocksSight": true,
+      "destructible": false
+    }
+  ],
+  "spawns": [
+    {
+      "id": "north-entry",
+      "position": {
+        "x": 3,
+        "y": 2
+      },
+      "side": "baekje"
+    },
+    {
+      "id": "courtyard-entry",
+      "position": {
+        "x": 3,
+        "y": 31
+      },
+      "side": "silla"
+    }
+  ],
+  "mission": {
+    "playerSide": "silla",
+    "enemySide": "baekje",
+    "spawnId": "courtyard-entry",
+    "enemySpawnId": "north-entry",
+    "objective": "성문 방어와 대피로 확보",
+    "winConditions": [
+      {
+        "type": "waves_complete",
+        "count": 6
+      },
+      {
+        "type": "counter_at_least",
+        "counterId": "evacuated",
+        "value": 12,
+        "zoneId": "evacuation-exit"
+      }
+    ],
+    "loseConditions": [
+      {
+        "type": "object_destroyed",
+        "objectId": "gate-main"
+      },
+      {
+        "type": "counter_below",
+        "counterId": "surviving_civilians",
+        "value": 12
+      }
+    ],
+    "events": [
+      {
+        "trigger": {
+          "type": "wave_start",
+          "wave": 5
+        },
+        "action": {
+          "type": "set_object_state",
+          "objectId": "gate-main",
+          "state": "open"
+        },
+        "note": "대본의 동문 개방 사건을 위치·시점 시험안으로 변환"
+      }
+    ],
+    "counters": [
+      {
+        "id": "surviving_civilians",
+        "initial": 20
+      },
+      {
+        "id": "evacuated",
+        "initial": 0
+      }
+    ]
+  },
+  "assumptions": [
+    "지형과 배치는 플레이 검증 전의 기획 시험안",
+    "1타일=1월드 단위는 시험값; 실제 미터 크기는 미확정",
+    "이동은 4방향 1칸 점유 시험; 다중 칸 병력은 미구현",
+    "사거리는 타일 중심 간 유클리드 거리; 시야는 2D 장애물만 검사",
+    "높이·성벽 위 유닛·투사체 곡선·진영별 지형 효과는 미구현"
+  ]
+}

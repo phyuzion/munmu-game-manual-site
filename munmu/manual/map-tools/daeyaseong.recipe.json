@@ -1,0 +1,352 @@
+{
+  "schemaVersion": "1.0.0",
+  "templateId": "daeyaseong-siege-prototype",
+  "name": "대야성 외성 · 공유 지형 시험안",
+  "status": "prototype",
+  "coordinateSystem": {
+    "origin": "top-left",
+    "x": "east",
+    "y": "south",
+    "unit": "tile"
+  },
+  "grid": {
+    "width": 8,
+    "height": 36,
+    "tileWorldUnits": 1
+  },
+  "defaultTile": {
+    "terrain": "dirt",
+    "elevation": 0
+  },
+  "terrainRects": [
+    {
+      "x": 0,
+      "y": 0,
+      "width": 1,
+      "height": 22,
+      "terrain": "forest"
+    },
+    {
+      "x": 7,
+      "y": 0,
+      "width": 1,
+      "height": 22,
+      "terrain": "forest"
+    },
+    {
+      "x": 0,
+      "y": 12,
+      "width": 8,
+      "height": 3,
+      "terrain": "water"
+    },
+    {
+      "x": 1,
+      "y": 12,
+      "width": 6,
+      "height": 3,
+      "terrain": "bridge"
+    },
+    {
+      "x": 0,
+      "y": 25,
+      "width": 8,
+      "height": 11,
+      "terrain": "stone"
+    }
+  ],
+  "zones": [
+    {
+      "id": "approach",
+      "name": "북쪽 진입로",
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "width": 8,
+        "height": 12
+      }
+    },
+    {
+      "id": "crossing",
+      "name": "하천과 다리",
+      "rect": {
+        "x": 0,
+        "y": 12,
+        "width": 8,
+        "height": 3
+      }
+    },
+    {
+      "id": "gatefront",
+      "name": "성문 앞 교전지",
+      "rect": {
+        "x": 0,
+        "y": 15,
+        "width": 8,
+        "height": 10
+      }
+    },
+    {
+      "id": "courtyard",
+      "name": "성 안 대피로",
+      "rect": {
+        "x": 0,
+        "y": 25,
+        "width": 8,
+        "height": 11
+      }
+    },
+    {
+      "id": "courtyard-objective",
+      "name": "성 안 거점",
+      "rect": {
+        "x": 1,
+        "y": 28,
+        "width": 6,
+        "height": 4
+      }
+    },
+    {
+      "id": "evacuation-exit",
+      "name": "성 안 대피 지점",
+      "rect": {
+        "x": 1,
+        "y": 33,
+        "width": 6,
+        "height": 2
+      }
+    }
+  ],
+  "objects": [
+    {
+      "id": "wall-west",
+      "prototypeId": "wall",
+      "anchor": {
+        "x": 0,
+        "y": 24
+      },
+      "footprint": {
+        "width": 1,
+        "height": 1
+      },
+      "blocksMovement": true,
+      "blocksSight": true,
+      "destructible": false
+    },
+    {
+      "id": "gate-main",
+      "prototypeId": "gate",
+      "anchor": {
+        "x": 1,
+        "y": 24
+      },
+      "footprint": {
+        "width": 6,
+        "height": 1
+      },
+      "type": "gate",
+      "state": "closed",
+      "blocksMovement": true,
+      "blocksSight": true,
+      "destructible": true,
+      "health": 1000
+    },
+    {
+      "id": "wall-east",
+      "prototypeId": "wall",
+      "anchor": {
+        "x": 7,
+        "y": 24
+      },
+      "footprint": {
+        "width": 1,
+        "height": 1
+      },
+      "blocksMovement": true,
+      "blocksSight": true,
+      "destructible": false
+    },
+    {
+      "id": "barricade-left",
+      "prototypeId": "barricade",
+      "anchor": {
+        "x": 0,
+        "y": 20
+      },
+      "footprint": {
+        "width": 1,
+        "height": 1
+      },
+      "blocksMovement": true,
+      "blocksSight": false,
+      "destructible": true,
+      "health": 300
+    },
+    {
+      "id": "house-east",
+      "prototypeId": "house",
+      "anchor": {
+        "x": 7,
+        "y": 28
+      },
+      "footprint": {
+        "width": 1,
+        "height": 3
+      },
+      "blocksMovement": true,
+      "blocksSight": true,
+      "destructible": false
+    }
+  ],
+  "spawns": [
+    {
+      "id": "north-entry",
+      "position": {
+        "x": 3,
+        "y": 2
+      },
+      "side": "baekje"
+    },
+    {
+      "id": "courtyard-entry",
+      "position": {
+        "x": 3,
+        "y": 31
+      },
+      "side": "silla"
+    }
+  ],
+  "variants": [
+    {
+      "id": "silla-1-1",
+      "route": "silla",
+      "battleId": "1-1",
+      "name": "신라 1-1 대야성 함락",
+      "playerSide": "silla",
+      "enemySide": "baekje",
+      "spawnId": "courtyard-entry",
+      "enemySpawnId": "north-entry",
+      "objective": "성문 방어와 대피로 확보",
+      "stageUrl": "../campaign-stage.html?route=silla&id=1-1",
+      "winConditions": [
+        {
+          "type": "waves_complete",
+          "count": 6
+        },
+        {
+          "type": "counter_at_least",
+          "counterId": "evacuated",
+          "value": 12,
+          "zoneId": "evacuation-exit"
+        }
+      ],
+      "loseConditions": [
+        {
+          "type": "object_destroyed",
+          "objectId": "gate-main"
+        },
+        {
+          "type": "counter_below",
+          "counterId": "surviving_civilians",
+          "value": 12
+        }
+      ],
+      "events": [
+        {
+          "trigger": {
+            "type": "wave_start",
+            "wave": 5
+          },
+          "action": {
+            "type": "set_object_state",
+            "objectId": "gate-main",
+            "state": "open"
+          },
+          "note": "대본의 동문 개방 사건을 위치·시점 시험안으로 변환"
+        }
+      ],
+      "counters": [
+        {
+          "id": "surviving_civilians",
+          "initial": 20
+        },
+        {
+          "id": "evacuated",
+          "initial": 0
+        }
+      ]
+    },
+    {
+      "id": "baekje-1-3",
+      "route": "baekje",
+      "battleId": "1-3",
+      "name": "백제 1-3 대야성의 성문",
+      "playerSide": "baekje",
+      "enemySide": "silla",
+      "spawnId": "north-entry",
+      "enemySpawnId": "courtyard-entry",
+      "objective": "성문 돌파와 성 안 거점 확보",
+      "stageUrl": "../campaign-stage.html?route=baekje&id=1-3",
+      "winConditions": [
+        {
+          "type": "object_destroyed",
+          "objectId": "gate-main"
+        },
+        {
+          "type": "hold_zone",
+          "zoneId": "courtyard-objective",
+          "seconds": 10
+        }
+      ],
+      "loseConditions": [
+        {
+          "type": "leader_incapacitated",
+          "side": "baekje"
+        },
+        {
+          "type": "time_limit_exceeded",
+          "seconds": null
+        }
+      ],
+      "events": [],
+      "counters": []
+    }
+  ],
+  "terrainTypes": {
+    "dirt": {
+      "label": "흙길",
+      "color": "#c4ab76",
+      "moveCost": 1,
+      "blocksMovement": false,
+      "blocksSight": false
+    },
+    "stone": {
+      "label": "성 안 바닥",
+      "color": "#b6ad99",
+      "moveCost": 1,
+      "blocksMovement": false,
+      "blocksSight": false
+    },
+    "forest": {
+      "label": "숲",
+      "color": "#688862",
+      "moveCost": 1.5,
+      "blocksMovement": false,
+      "blocksSight": true
+    },
+    "water": {
+      "label": "물",
+      "color": "#6d9fab",
+      "moveCost": null,
+      "blocksMovement": true,
+      "blocksSight": false
+    },
+    "bridge": {
+      "label": "다리 바닥",
+      "color": "#cfad7b",
+      "moveCost": 1,
+      "blocksMovement": false,
+      "blocksSight": false
+    }
+  }
+}
