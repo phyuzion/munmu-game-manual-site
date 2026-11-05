@@ -2,3 +2,5 @@
 
 /* Keep the complete battlefield visible on desktop, including wall defenders. */
 @media(min-width:851px){.screen canvas{width:auto;max-width:100%;max-height:calc(100vh - 110px);margin:auto}.screen{display:flex;justify-content:center}.overlay{width:100%}}
+
+.ally-wave{margin:0 0 10px;padding:8px 10px;border:1px solid #467d76;border-radius:7px;background:#173d39;color:#b8e8de;font-weight:700;font-size:13px}
