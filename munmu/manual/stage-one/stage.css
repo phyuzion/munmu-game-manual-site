@@ -7,3 +7,7 @@
 
 .loadout{display:grid;gap:8px;margin:14px 0}.loadout p{margin:0}.loadout label{display:flex;align-items:center;justify-content:space-between;gap:8px}.loadout select{max-width:75%;padding:7px;background:#fff;color:#203525;border:1px solid #829988;border-radius:6px;font:inherit}.aim-hint{background:#6e4e22;color:#fff0c2;padding:10px;border-radius:7px;font-weight:700}.aim-hint button{margin-left:8px;color:white;background:#49351f;border:1px solid #ddb973;border-radius:4px;padding:4px 7px}.aim-hint[hidden]{display:none}
 .overlay .card{max-height:100%;overflow:auto}
+
+#siege-controls[hidden]{display:none}header nav{display:flex;flex-wrap:wrap;gap:5px;justify-content:flex-end;font-size:13px}
+
+.siege-deploy{padding:10px;border:1px solid #927b4d;border-radius:8px;background:#3a3324;margin-bottom:10px}.siege-deploy strong{color:#ffe3a3}.siege-deploy p{font-size:12px;margin:4px 0 8px;color:#e2d6bc}
